@@ -415,3 +415,9 @@ variable "website_enabled" {
   default     = false
   description = "Set to true to use an S3 static website as origin"
 }
+
+variable "custom_headers_list" {
+  type        = list(object({ name = string, value = string }))
+  default     = []
+  description = "Origin custom headers list"
+}
